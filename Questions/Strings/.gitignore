@@ -1,0 +1,14 @@
+# Ignore compiled executables
+*.exe
+*.out
+*.o
+
+# Ignore other build artifacts
+*.obj
+*.dll
+*.lib
+
+# Ignore IDE files
+.vscode/
+*.suo
+*.user
