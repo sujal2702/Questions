@@ -1,0 +1,11 @@
+# Ignore executable files in Questions folder and subfolders
+Questions/**/*.exe
+Questions/**/*.out
+Questions/**/*.o
+Questions/**/*.obj
+
+# Common executable extensions
+*.exe
+*.out
+*.o
+*.obj
