@@ -69,7 +69,9 @@ char getMaxOccCharacter(string s) {
     }
     
 
-    return 'a'+ans;
+    return 'a'+ans;  //dekho i to arr[26] me se kisi ek position pe hoga to usko as a string return krne k liye 
+                    // (ans + 'a') jiska mtlb INT + INT(ASCII of a) isse lowercase of a k respect me store krega 
+                    //MTLB if ans = 0 then 0+97(which is ASCII of a) there if will return a if ans = 2 then 97+2 which is 'c' it will return 'c'
 
 }
 
