@@ -53,10 +53,10 @@ char getMaxOccCharacter(string s) {
     //create an array of count of characters
     for(int i=0; i<s.length(); i++) {
         char ch = s[i];
-        //lowercase
+        //lowercase means if(ch>=a && ch<=z) ch - 'a' else uppercase then ch - 'A'
         int number = 0;
-        number = ch - 'a';
-        arr[number]++;
+        number = ch - 'a'; //because b - 'a' = 1 (FROM CHAR TO INT) and in next step we increase the count of 1 ex arr[1]++;
+        arr[number]++;   
     }
 
     //find maximum occ character
