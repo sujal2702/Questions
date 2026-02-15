@@ -43,7 +43,7 @@ string reverseWords(string s) {
         }
 
       }
-      return ans.substr(1);
+      return ans.substr(1); //this will return from the 1st index (not 0th) to end of string
 
       
 }

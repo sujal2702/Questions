@@ -53,10 +53,10 @@ char getMaxOccCharacter(string s) {
     //create an array of count of characters
     for(int i=0; i<s.length(); i++) {
         char ch = s[i];
-        //lowercase
+        //lowercase means if(ch>=a && ch<=z) ch - 'a' else uppercase then ch - 'A'
         int number = 0;
-        number = ch - 'a';
-        arr[number]++;
+        number = ch - 'a'; //because b - 'a' = 1 (FROM CHAR TO INT) and in next step we increase the count of 1 ex arr[1]++;
+        arr[number]++;   
     }
 
     //find maximum occ character
@@ -69,7 +69,9 @@ char getMaxOccCharacter(string s) {
     }
     
 
-    return 'a'+ans;
+    return 'a'+ans;  //dekho i to arr[26] me se kisi ek position pe hoga to usko as a string return krne k liye 
+                    // (ans + 'a') jiska mtlb INT + INT(ASCII of a) isse lowercase of a k respect me store krega 
+                    //MTLB if ans = 0 then 0+97(which is ASCII of a) there if will return a if ans = 2 then 97+2 which is 'c' it will return 'c'
 
 }
 
