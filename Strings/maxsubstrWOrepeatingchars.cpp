@@ -1,4 +1,4 @@
-// set + brute force approach 
+// set + brute force approach ..
 #include<bits/stdc++.h>
 #include<set>
 #include<string>
@@ -6,7 +6,7 @@ using namespace std;
 
 
     int lengthOfLongestSubstring(string s) {
-        int ans  = 0;
+        int ans  = 0; // becuase we need to return the max size of substring
         for(int i =0; i<s.size(); i++){
             unordered_set <int> st;
             for(int j=i; j<s.size(); j++){
