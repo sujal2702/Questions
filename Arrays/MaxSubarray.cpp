@@ -24,6 +24,56 @@
 
 //OPTIMAL APPROACH -------> //KADANE'S ALGORITHM
 
+#include <bits/stdc++.h>
+using namespace std;
+
+/*
+    This code prints the maximum sum subarray itself (NOT the length).
+*/
+
+void printMaxSubarray(int arr[], int n) {
+    
+    long long sum = 0, maxi = LLONG_MIN;
+    int start = 0;        // temporary start
+    int ansStart = -1;    // final subarray start
+    int ansEnd = -1;      // final subarray end
+
+    for (int i = 0; i < n; i++) {
+        
+        if (sum == 0) {
+            start = i;    // potential new subarray start
+        }
+
+        sum += arr[i];
+
+        if (sum > maxi) {
+            maxi = sum;
+            ansStart = start;
+            ansEnd = i;
+        }
+
+        if (sum < 0) {
+            sum = 0;
+        }
+    }
+
+    cout << "Maximum Sum: " << maxi << endl;
+    cout << "Subarray: ";
+
+    for (int i = ansStart; i <= ansEnd; i++) {
+        cout << arr[i] << " ";
+    }
+}
+
+int main() {
+    int arr[] = {-2, -3, 4, -1, -2, 1, 5, -3};
+    int n = sizeof(arr) / sizeof(arr[0]);
+
+    printMaxSubarray(arr, n);
+
+    return 0;
+}
+
 // THIS IS KADANE'S ALGORITHM
 
 class Solution {
@@ -44,5 +94,4 @@ public:
 
     }
 };
-
 
