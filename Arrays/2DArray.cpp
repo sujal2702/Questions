@@ -1,6 +1,7 @@
 #include<iostream> 
 using namespace std; 
 
+//search element in a 2D array
 bool isPresent(int arr[][3], int target, int row, int col) {
 
   for(int row=0; row<3; row++) {
@@ -15,9 +16,9 @@ bool isPresent(int arr[][3], int target, int row, int col) {
     return 0;
 }
 
-//to print row wise sum
+//to print col wise sum
 void printColSum(int arr[][3], int row, int col) {
-    cout << "Printing Sum -> " << endl;
+   
     for(int col=0; col<3; col++) {
         int sum = 0;
         for(int row=0; row<3; row++) {
@@ -44,6 +45,7 @@ void printSum(int arr[][3], int row, int col) {
     cout << endl;
 }
 
+//to find the largest element in a row sum
 int largestRowSum(int arr[][3], int row, int col) {
 
     int maxi = INT_MIN;
@@ -100,8 +102,8 @@ int main() {
         }
         cout << endl;
     }
-/*
-    cout <<" Enter the element to search " << endl;
+
+ /*  cout <<" Enter the element to search " << endl;
     int target;
     cin >> target;
 
@@ -113,7 +115,8 @@ int main() {
     }
 
     printColSum(arr, 3, 3 );
-    */
+ */
+  
    int ansIndex = largestRowSum(arr,3,3);
    cout << " Max row is at index " << ansIndex << endl;
 
