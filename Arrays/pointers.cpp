@@ -55,7 +55,7 @@ int main () {
 
    int *p  = &num;
    cout << "before " << num << endl;
-   (*p)++;
+   (*p)++; //correct way to increase the value of pointer
    cout << "after " << num << endl;
 
     //copying a pointer
@@ -70,7 +70,7 @@ int main () {
    *t = *t +1;
     cout << *t << endl;
     cout << " before t " << t << endl;
-    t = t + 1;
+    t = t + 1; //it will increase the 't' address by 4 since int take 4 values
     cout << " after t " << t << endl;
 
     return 0;
