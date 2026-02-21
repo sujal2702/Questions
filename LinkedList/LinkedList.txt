@@ -82,3 +82,22 @@ Object	             .
 Pointer to object   ->
 
 --------------------------------------------------------------------------------------------------------------------------
+
+void InsertAtHead (Node* &head, int d){
+    // insert krne se pehle Node create to karo
+    Node* temp = new Node(d);
+    temp -> next = head;
+    head = temp;
+}
+
+❓ Agar Node head likhen to?
+
+Galat kyun?
+
+head object hoga, pointer nahi
+
+***-----Linked list me head pointer hota hai---***
+
+Pura object copy ho jayega (expensive & wrong logic)
+
+
