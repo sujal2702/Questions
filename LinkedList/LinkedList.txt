@@ -1,0 +1,84 @@
+class Node{
+
+    public:
+    int data;
+    Node* next; //name should be same as class name
+};
+
+
+Node next;   // ❌ Wrong
+
+🚨 Problem
+Compiler ko class ka size pata karna hota hai.
+
+Isse infinite recursion ho jayega.
+
+Har Node ke andar ek aur Node hoga. [sizeof(Node) = sizeof(int) + sizeof(Node)] infinity loop
+
+Compiler size calculate nahi kar payega. 
+
+Isliye pointer use karte hain -->> Node* next ✅ [sizeof(Node) = sizeof(int) + sizeof(pointer)] fixed size
+
+------------------------------------------------------------------------------------------------------------------------------------------
+
+Node* node1 = new Node();
+
+Yahan dhyaan do:
+
+👉 node1 object nahi hai
+👉 node1 ek pointer hai jo Node object ko point kar raha hai
+
+🔹 Case 1: Agar object hota
+Node node1;
+
+Tab access karte:
+
+node1.data
+node1.next
+
+Kyuki node1 directly object hai.
+
+🔹 Case 2: Tumhara case
+Node* node1 = new Node();
+
+Yahan:
+
+new Node() heap me object bana raha hai
+
+node1 us object ka address store kar raha hai
+
+To memory kuch aisa hai:
+
+Stack:
+node1  ----->  Heap:
+               [ data | next ]
+
+Isliye:
+node1 = address
+
+actual object = heap me
+
+🔥 Isliye '->' use hota hai
+--------------------------------------------------------------
+Pointer ke through member access karne ke liye:
+
+node1->data
+---------------------------------------------------------------
+Yeh actually shortcut hai:
+
+(*node1).data
+
+Dhyaan do:
+
+*node1 → object
+
+(*node1).data → object ka data
+
+Isko simple banane ke liye C++ ne -> operator diya.
+-------------------------------------------------------------------------------------------------------------------------------
+🎯 Golden Rule
+Situation	      Syntax
+Object	             .
+Pointer to object   ->
+
+--------------------------------------------------------------------------------------------------------------------------
