@@ -7,10 +7,10 @@ bool isPrime(int n) {
     if (n <= 1)
         return false;
         
-    if (n == 2)
+    if (n == 2)    // direct return 
         return true;
         
-    if (n % 2 == 0)
+    if (n % 2 == 0)  //even number ko alag se handle karne se iteration half ho jayegi
         return false;
 
     for (int i = 3; i <= sqrt(n); i += 2) {
