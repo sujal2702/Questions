@@ -44,10 +44,10 @@ int main(){
     Node* head = node1; //head pointed to node 1;
     Node* tail = node1; //at starting since there is only 1 node that's why same head & tail
 
-    // print(head);
-    // InsertAtHead(head , 12);
-    // InsertAtHead(head , 15);
-    // print(head);
+    print(head);
+    InsertAtHead(head , 12);
+    InsertAtHead(head , 15);
+    print(head);
 
     InsertAtTail(tail, 13);
     InsertAtTail(tail, 17);
