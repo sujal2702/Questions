@@ -19,6 +19,12 @@ void InsertAtHead (Node* &head, int d){
     head = temp;
 }
 
+void InsertAtTail(Node* &tail , int d){
+    Node* temp = new Node(d);
+    tail -> next = temp;
+    tail = temp;
+}
+
 void print(Node* &head){
 
     Node* temp = head;
@@ -26,6 +32,7 @@ void print(Node* &head){
         cout << temp->data << " ";
         temp = temp -> next;
     }
+    cout<<endl;
 }
 
 int main(){
@@ -35,13 +42,17 @@ int main(){
     cout << "Next pointer: " << node1->next << endl;
 
     Node* head = node1; //head pointed to node 1;
+    Node* tail = node1; //at starting since there is only 1 node that's why same head & tail
+
+    // print(head);
+    // InsertAtHead(head , 12);
+    // InsertAtHead(head , 15);
+    // print(head);
+
+    InsertAtTail(tail, 13);
+    InsertAtTail(tail, 17);
+
     print(head);
-    cout << endl;
-    
-    InsertAtHead(head , 12);
-    InsertAtHead(head , 15);
-    print(head);
-    cout << endl;
     
 
     
