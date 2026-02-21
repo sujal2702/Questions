@@ -92,8 +92,7 @@ int main(){
     InsertAtPosition(head , tail, 4, 90);
     InsertAtPosition(head , tail, 6, 40);
     InsertAtPosition(head, tail, 7, 50);
-
-
+    InsertAtPosition(head, tail, 9, 100);
 
     print(head);
     
@@ -102,7 +101,7 @@ int main(){
     return 0;
 }
 
-//While Printing (while writing print function)
+//While Printing 
 
 //node already h  sirf print krna h to No Creation
 //since head ko move ya change nhi kr skte while printing LL disturb ho jayega
@@ -112,4 +111,4 @@ int main(){
 
 // becuase we are doing count++ inside h to agar hamara position 3 h to hame 2 tak jana h aur agar count < position  rkhenge to 2<3 wala condition satisfy ho jayega aur while loop ek baar aur chalega mtlb count++ ho jayega aur count = 3 hi ho jayega instead of 2 isliye ye while condition hi sahi h
 
-//overall output ye ayegga  -------->>> 30 22 10 90 13 40 50 17
+//overall output ye ayegga  -------->>> 30 22 10 90 13 40 50 17 100
