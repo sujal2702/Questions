@@ -11,6 +11,15 @@ class Node{
         this->data = data;
         this->next = NULL;
     }
+
+    ~Node(){
+        int value = this -> data;
+        while(this -> next != NULL){
+            delete next;
+            this -> next = NULL;
+        }
+        cout << "Memory freed for the data " << value <<endl;
+    }
 };
 void InsertAtHead (Node* &head, int d){
     // insert krne se pehle Node create to karo
@@ -57,6 +66,35 @@ void InsertAtPosition(Node* &head, Node* &tail, int position, int d){
    temp -> next = NodeToInsert;
 
 }
+void deleteAtPosition(int position , Node* &head){
+
+    // delete from start or deleting first node
+    if(position == 1){
+        Node* temp = head;
+        head = head -> next; //update head
+        temp -> next = NULL;
+        delete temp;  //this delete function will call destructor
+
+    }
+    else{ // deleting from middle or from last same hi h
+        Node* prev = NULL; // start from NULL to one node behind the node to be deleted
+        Node* curr = head; // design curr and put it on node which we need to delete 
+
+        int count = 1;
+        while(count < position){
+            prev = curr ;//1st update prev because we neet to put prev on old curr
+            curr = curr -> next;
+            count++;
+        }
+
+        // ab yaha pe curr is poiting to --> jisko delete krna h 
+        // prev pointing to --> delete se just pehle wala element
+
+        prev -> next = curr -> next;
+        curr -> next = NULL;
+        delete curr;
+    }
+}
 
 void print(Node* &head){
 
@@ -77,7 +115,7 @@ int main(){
     Node* head = node1; //head pointed to node 1;
     Node* tail = node1; //at starting since there is only 1 node that's why same head & tail
 
-    print(head);
+    // print(head);
     // InsertAtHead(head , 12);
     // InsertAtHead(head , 15);
     // print(head);
@@ -85,7 +123,7 @@ int main(){
     InsertAtTail(tail, 13);
     InsertAtTail(tail, 17);
 
-    print(head);
+    // print(head);
 
     InsertAtPosition(head , tail, 1, 22);
     InsertAtPosition(head , tail, 1, 30);
@@ -96,7 +134,11 @@ int main(){
 
     print(head);
     
+   deleteAtPosition(9 , head); //last position deletion
+   print(head);
 
+   deleteAtPosition(1 , head);
+   print(head);
     
     return 0;
 }
