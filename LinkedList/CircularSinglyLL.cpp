@@ -47,7 +47,14 @@ void InsertAtPostion(Node* &tail , int element , int d){
 }
 
 void print(Node* tail){
+
+    if(tail == NULL){
+        cout <<"Tail hi nhi h" <<endl;
+        return ;
+    }
+
     Node* temp = tail;
+
     do{
         cout << tail -> data <<" ";
         tail= tail -> next;
@@ -72,11 +79,17 @@ void deleteNode(Node* &tail, int value){
             curr = curr -> next;
         }
         // ab curr is pointing to value node
-       
-        prev -> next = curr -> next;
-         if(curr == tail){
+        // for 1 Node linked List curr , prev , tail sab usipe hoga 
+       if(curr == prev){
+         tail = NULL;
+       }
+       // for more than 2 node >=2 nodes
+       if(curr == tail){
             tail = prev;
         }
+
+        prev -> next = curr -> next;
+         
         curr -> next = NULL;
         delete curr; 
     }
@@ -99,9 +112,12 @@ int main(){
 
     deleteNode(tail , 1);
     print(tail);
-   
+
     deleteNode(tail , 2);
     print(tail);
+   
+    // deleteNode(tail , 1);
+    // print(tail);
     
 
     return 0;
