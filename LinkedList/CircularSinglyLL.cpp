@@ -55,6 +55,33 @@ void print(Node* tail){
     while(tail != temp);
     cout << endl;
 }
+
+void deleteNode(Node* &tail, int value){
+    if(tail == NULL){
+        //nothing to delete 
+        return ;
+    }
+    else{
+        //prev aur curr banao // aur prev curr k piche rhe islsiye prev ko tail pe rkho
+        Node* prev = tail;
+        Node* curr = prev -> next;
+
+        //ab value dundho 
+        while(curr ->data != value){
+            prev = curr;
+            curr = curr -> next;
+        }
+        // ab curr is pointing to value node
+       
+        prev -> next = curr -> next;
+         if(curr == tail){
+            tail = prev;
+        }
+        curr -> next = NULL;
+        delete curr; 
+    }
+}
+
 int main(){
     Node* tail = NULL;
 
@@ -65,10 +92,28 @@ int main(){
     // print(tail);
 
     InsertAtPostion(tail ,2 ,3);
-    print(tail); 
+    // print(tail); 
 
-    InsertAtPostion(tail ,2, 1);
+    InsertAtPostion(tail ,2, 4);
     print(tail);
+
+    deleteNode(tail , 1);
+    print(tail);
+   
+    deleteNode(tail , 2);
+    print(tail);
+    
 
     return 0;
 }
+
+// code output overall
+/*
+
+1 2 4 3 
+Memory freed for data 1
+3 2 4
+Memory freed for data 2
+3 4
+
+*/
