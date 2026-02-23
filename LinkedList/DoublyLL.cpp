@@ -176,4 +176,7 @@ int main(){
 // 20 30 
 
 /*NOTE :  The destructor is written in such a way that if u don't make the node -> next = NULL (the node which u need to delete it's next shoud be NULL OtherWise it will DELETE THE ENTIRE LINKED LIST)
-because we wrote the code of recusrive deletion  in ~Node() Destructor */
+because we wrote the code of recusrive deletion  in ~Node() Destructor 
+
++ IN deletion we wrote the MAIN LOGIC WE DIDN'T UPDATED TAIL there*/
+
