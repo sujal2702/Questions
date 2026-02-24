@@ -34,5 +34,15 @@ ListNode* arrayToLinkedList(vector<int>& arr) {
     return head;
 }
 
+//Concept of slow and fast pointers
 
+ListNode* slow = head;
+ListNode* fast = head;
+
+while(fast != NULL && fast->next != NULL){
+    slow = slow->next;          // +1 step
+    fast = fast->next->next;    // +2 steps
+}
+
+// When the loop ends, slow is at the middle.
 
