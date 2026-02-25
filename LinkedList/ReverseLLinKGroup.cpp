@@ -56,3 +56,28 @@ public:
     }
 };
 
+/* NORMAL----------------- REVERSE LINKED LIST --------------------------------- */
+
+   // ------------------------RECURSIVE APPROACH ------------------------------------------------
+   
+    void reverse(ListNode* &head, ListNode* prev, ListNode* curr){
+
+        //base case // rukna kaha h?
+        if(curr == NULL){
+            head = prev;
+            return ;
+        }
+
+        ListNode* forward = curr -> next;
+        reverse(head , curr, forward);
+
+        // wapas return k time 
+        curr -> next = prev; // yahi main h jo return k time sahi connection krta h reverse me
+    }
+    ListNode* reverseList(ListNode* head) {
+
+        ListNode* prev = NULL;
+        ListNode* curr = head;
+        reverse(head , prev, curr);
+        return head;
+
