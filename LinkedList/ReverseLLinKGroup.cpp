@@ -81,3 +81,18 @@ public:
         reverse(head , prev, curr);
         return head;
 
+    // --------------ITERATIVE APPROACH ----------------------------------------------------------
+        if(head == NULL || head -> next == NULL){ //0 OR 1 NODE CASE
+            return head;
+        } 
+        ListNode* prev = NULL;
+        ListNode* curr = head;
+
+        while(curr != NULL){
+            ListNode* forward = curr -> next;
+            curr -> next = prev;
+            prev = curr;
+            curr = forward;
+        }
+        return prev; // since prev = curr and curr = forward aur forward NULL pe tha 
+                   // isliye curr bhi NULL ho jayega
