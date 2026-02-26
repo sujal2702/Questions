@@ -28,8 +28,9 @@ public:
         ListNode* temp = head; //check karo ki k elements hai bhi ki nhi agar nhi h to don't reverse
         int cnt = 0;
 
-        while (temp != NULL && cnt < k) {
-            temp = temp->next;
+        while (temp != NULL && cnt < k) { //this loop is to check ki 'k' jitne elements present h bhi ki nhi // agar hai to normal procedure aur agar nhi phir to return head // return karo wahi element
+                                                                                                                                       // taaki sirf k element ho to hi reversal ho wrna naa ho 
+            temp = temp->next; 
             cnt++;
         }
 
