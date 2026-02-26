@@ -38,3 +38,24 @@ using namespace std;
     return NULL;
 
 }
+
+Node* getStartingNode(Node* head) {
+
+    if(head == NULL) 
+        return NULL;
+
+    Node* intersection = floydDetectLoop(head);
+    
+    if(intersection == NULL)
+        return NULL;
+    
+    Node* slow = head;
+
+    while(slow != intersection) {
+        slow = slow -> next;
+        intersection = intersection -> next;
+    }  
+
+    return slow;
+
+}
