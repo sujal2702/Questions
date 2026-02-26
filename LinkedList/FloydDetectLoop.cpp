@@ -59,3 +59,23 @@ Node* getStartingNode(Node* head) {
     return slow;
 
 }
+
+Node *removeLoop(Node *head)
+{
+    if( head == NULL)
+        return NULL;
+
+    Node* startOfLoop = getStartingNode(head);
+    
+    if(startOfLoop == NULL)
+        return head;
+    
+    Node* temp = startOfLoop;
+
+    while(temp -> next != startOfLoop) {
+        temp = temp -> next;
+    } 
+
+    temp -> next = NULL;
+    return head;
+}
