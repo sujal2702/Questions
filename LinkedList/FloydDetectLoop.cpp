@@ -79,3 +79,45 @@ Node *removeLoop(Node *head)
     temp -> next = NULL;
     return head;
 }
+
+// ---------------DETECT AND REMOVE LOOP USING SET---------------
+
+/*
+class Node {
+  public:
+    int data;
+    Node* next;
+
+    Node(int val) {
+        data = val;
+        next = nullptr;
+    }
+};
+*/
+class Solution {
+  public:
+    void removeLoop(Node* head) {
+        // code here
+        set <Node *> st;
+        Node* prev = NULL;
+        Node* temp = head;
+        
+        while(temp != NULL){
+        
+        if(st.find(temp) == st.end()){ //mtlb nhi mila yaha sw
+            st.insert(temp);
+            //update head and prev
+            prev = temp;
+            temp = temp -> next;
+            
+        }
+        
+        // if this ends it means u are at repeated nodes
+        else{
+            prev -> next = NULL;
+            return ; //AGAR Node* rha to return head
+        }
+        }
+        // agar loop hua hi nhi to return head; void case me leave as it is
+    }
+};
