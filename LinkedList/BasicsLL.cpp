@@ -9,7 +9,7 @@ struct ListNode {
 };
 //-----------------------IGNORE ABOVE THIS ---------------------------------------
 
-//Converting from Linked List to array
+//----------------------------------Converting from Linked List to array -----------------------------------------
 
 vector<int> linkedListToArray(ListNode* head) {
 
@@ -24,7 +24,7 @@ vector<int> linkedListToArray(ListNode* head) {
     return arr;
 }
 
-//Convert Array Into Linked List
+//-----------------------Convert Array Into Linked List-----------------
 
 ListNode* arrayToLinkedList(vector<int>& arr) {
 
@@ -42,7 +42,7 @@ ListNode* arrayToLinkedList(vector<int>& arr) {
     return head;
 }
 
-//Concept of slow and fast pointers - Example: Finding middle of linked list
+//------------------------------Concept of slow and fast pointers - Example: Finding middle of linked list------------------
 ListNode* findMiddle(ListNode* head) {
     
     ListNode* slow = head;
@@ -75,3 +75,28 @@ ListNode* reverseList(ListNode* head) {
         }
         return prev; // since prev = curr and curr = forward aur forward NULL pe tha 
                    // isliye curr bhi NULL ho jayega
+}
+
+//--------------------------Remove Duplicate from a sorted linked list -------------------------------
+
+//---------THE MAIN REASON TO PUT THIS CODE IS TO SHOW HOW THE NODES ARE ADJUSTED WHEN U DELETE A NODE
+
+    ListNode* deleteDuplicates(ListNode* head) {
+        
+        ListNode* temp = head;
+        while(temp != NULL && temp -> next != NULL){
+
+            if(temp ->val == temp -> next -> val){
+
+                ListNode* next_next = temp -> next -> next; //store kr lo taki LL lost na ho jaye
+                ListNode* NodeToDelete = temp -> next; //duplicate next ko delete kar do
+                delete NodeToDelete; //delete function
+                temp-> next = next_next; // phir stored address use krlo  
+                                        // temp k next ko point karane k liye
+            }
+             else{
+                    temp = temp -> next;
+                }
+        }
+        return head;
+    }
