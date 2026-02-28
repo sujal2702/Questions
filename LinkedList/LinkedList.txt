@@ -100,4 +100,21 @@ head object hoga, pointer nahi
 
 Pura object copy ho jayega (expensive & wrong logic)
 
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+when u want to delete or remove an object from linked list
+
+first keep the trace of the next pointer of node which u need to delete
+Jo node delete karna h uske next pointer ka trace rakho taki usko delete karne par Linked List ghum na ho jaye 
+
+fir uske baad jo delete karna h usko ek Node* k pointer me store karo
+
+phir delete karo uss Node ko
+
+phir prev -> next ko jo next pointer ka trace rkhe the usse connect kar do 
+
+
+
+
+
 
