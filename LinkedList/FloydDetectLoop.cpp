@@ -121,3 +121,12 @@ class Solution {
         // agar loop hua hi nhi to return head; void case me leave as it is
     }
 };
+
+// -----------------------IMPORTANT THING TO REMEMBER -------------------
+                     /*    Simple mental rule
+
+                             Loop ke baad:
+
+                           fast == NULL → even  fast last node k aage NULL pe hoga
+
+                            fast != NULL → odd   fast last wale node pe hoga */
