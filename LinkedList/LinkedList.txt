@@ -114,8 +114,10 @@ phir delete karo uss Node ko
 phir prev -> next ko jo next pointer ka trace rkhe the usse connect kar do 
 
 ---------------------------------------------------------------------------------
+
+------------------------Palindrome check krna Linked List Me------------------------------------ 
+
 1st method
-palindrome check krna 
 pehle array  me convert karo 
 phir array ka palindrome check karke return kar do
 
