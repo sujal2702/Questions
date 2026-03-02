@@ -114,18 +114,16 @@ phir delete karo uss Node ko
 phir prev -> next ko jo next pointer ka trace rkhe the usse connect kar do 
 
 ---------------------------------------------------------------------------------
-
+1st method
 palindrome check krna 
-
 pehle array  me convert karo 
 phir array ka palindrome check karke return kar do
 
 2nd method
-
-pehle middle dundho element ka 
-phir uss middle se reverse kar do 
-phir head se ek pointer aur mid k aage se ek pointer lagao
-aur comparison karo 
+1.pehle middle dundho element ka
+2.phir uss middle se reverse kar do 
+3. phir head se ek pointer aur mid k aage se ek pointer lagao
+4. Aur ab comparison karo 
 
 
 
