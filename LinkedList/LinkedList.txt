@@ -117,36 +117,15 @@ phir prev -> next ko jo next pointer ka trace rkhe the usse connect kar do
 
 palindrome check krna 
 
-pehle array  me convert karo -> phir array ka palindrome check karke return kar do
+pehle array  me convert karo 
+phir array ka palindrome check karke return kar do
 
-class Solution {
-public:
-    bool IsPalindrome( vector <int> arr){
-        int n =  arr.size();
-        int s = 0;
-        int e = n -1 ;
-        while(s<=e){
-            if(arr[s] != arr[e]){
-                return false;
-            }
-            else{
-                s++;
-                e--;
-            }
-        }
-        return true;
-    }
-    bool isPalindrome(ListNode* head) {
-        vector <int> arr;
-        ListNode* temp = head;
-        while( temp != NULL){
+2nd method
 
-            arr.push_back(temp -> val);
-            temp = temp -> next;
-        }
-        return IsPalindrome(arr);
-    }
-};
+pehle middle dundho element ka 
+phir uss middle se reverse kar do 
+phir head se ek pointer aur mid k aage se ek pointer lagao
+aur comparison karo 
 
 
 
