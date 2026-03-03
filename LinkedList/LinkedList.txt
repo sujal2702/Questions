@@ -127,7 +127,7 @@ phir array ka palindrome check karke return kar do
 3. phir head se ek pointer aur mid k aage se ek pointer lagao
 4. Aur ab comparison karo 
 
--------------------------------------------------------------------------------------------------
+
 
 
 
