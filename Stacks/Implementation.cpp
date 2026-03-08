@@ -58,7 +58,7 @@ int main() {
 
     return 0;
 }
-
+//--------------------------------------------------------------------------------------------------------------------------
 //OUTPUT
 /* 
 
@@ -73,5 +73,19 @@ Top element: 40
  Stack is NOT empty
 
  Stack elements (top to bottom): 30 20 10
- 
+
+ -----------------------------------------------------------------------------------------------------------------------------
+
+swap() exchanges the entire contents of two stacks.
+After swapping, each stack gets the other stack’s elements.
+
+So:
+
+s.swap(s2);
+
+Everything inside s goes to s2
+
+Everything inside s2 goes to s
+
+No elements are copied one-by-one; the containers just exchange their internal data.
 */
