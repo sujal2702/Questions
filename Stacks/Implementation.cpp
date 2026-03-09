@@ -79,69 +79,79 @@ int main(){
     cout <<"Top element of stack is " <<st.peek() <<endl;
 }
 
-// Stacks STL FUNCTION
+/* 
+This is the output for this code
 
-// #include <iostream>
-// #include <stack>
-// using namespace std;
+Stack Overflow
+Top element of stack is 10
+Top element of stack is 5
+Top element of stack is 10
 
-// int main() {
+--------------------------------------------------------------------------------------------------------------
 
-//     // Creating a stack
-//     stack<int> s;
+>>>>>>>>>>>>>>>-----------------Stacks STL FUNCTION------------------->>>>>>>>>>>>>>>>>>>>>>>>>>
 
-//     // PUSH - inserting elements
-//     s.push(10);
-//     s.push(20);
-//     s.push(30);
-//     s.push(40);
+#include <iostream>
+#include <stack>
+using namespace std;
 
-//     cout << "After pushing elements:\n";
-//     cout << "Top element: " << s.top() << endl;
-//     cout << "Size: " << s.size() << endl;
+int main() {
 
-//     // POP - removing top element
-//     s.pop();
+    // Creating a stack
+    stack<int> s;
 
-//     cout << "\nAfter one pop:\n";
-//     cout << "Top element: " << s.top() << endl;
-//     cout << "Size: " << s.size() << endl;
+    // PUSH - inserting elements
+    s.push(10);
+    s.push(20);
+    s.push(30);
+    s.push(40);
 
-//     // Checking empty
-//     if(s.empty())
-//         cout << "\nStack is empty\n";
-//     else
-//         cout << "\nStack is NOT empty\n";
+    cout << "After pushing elements:\n";
+    cout << "Top element: " << s.top() << endl;
+    cout << "Size: " << s.size() << endl;
 
-//     // Traversing stack (by copying)
-//     stack<int> temp = s;
+    // POP - removing top element
+    s.pop();
 
-//     cout << "\nStack elements (top to bottom): ";
-//     while(!temp.empty()) {
-//         cout << temp.top() << " ";
-//         temp.pop();
-//     }
+    cout << "\nAfter one pop:\n";
+    cout << "Top element: " << s.top() << endl;
+    cout << "Size: " << s.size() << endl;
 
-//     // SWAP example
-//     stack<int> s2;
-//     s2.push(100);
-//     s2.push(200);
+    // Checking empty
+    if(s.empty())
+        cout << "\nStack is empty\n";
+    else
+        cout << "\nStack is NOT empty\n";
 
-//     cout << "\n\nBefore swap:";
-//     cout << "\nStack1 size: " << s.size();
-//     cout << "\nStack2 size: " << s2.size();
+    // Traversing stack (by copying)
+    stack<int> temp = s;
 
-//     s.swap(s2);
+    cout << "\nStack elements (top to bottom): ";
+    while(!temp.empty()) {
+        cout << temp.top() << " ";
+        temp.pop();
+    }
 
-//     cout << "\n\nAfter swap:";
-//     cout << "\nStack1 size: " << s.size();
-//     cout << "\nStack2 size: " << s2.size();
+    // SWAP example
+    stack<int> s2;
+    s2.push(100);
+    s2.push(200);
 
-//     return 0;
-// }
+    cout << "\n\nBefore swap:";
+    cout << "\nStack1 size: " << s.size();
+    cout << "\nStack2 size: " << s2.size();
+
+    s.swap(s2);
+
+    cout << "\n\nAfter swap:";
+    cout << "\nStack1 size: " << s.size();
+    cout << "\nStack2 size: " << s2.size();
+
+    return 0;
+}
+
 //--------------------------------------------------------------------------------------------------------------------------
 //OUTPUT
-/* 
 
 After pushing elements:
 Top element: 40
