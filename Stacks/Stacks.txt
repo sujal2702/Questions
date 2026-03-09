@@ -1,0 +1,23 @@
+If u intialise stack <int> s; then
+
+s.push(x)   → element insert
+s.pop()     → top element remove
+s.top()     → top element access
+s.empty()   → check stack empty
+s.size()    → number of elements
+
+
+-------------------------------------------------------------------------------------------------
+swap() exchanges the entire contents of two stacks.
+After swapping, each stack gets the other stack’s elements.
+
+So:
+
+s.swap(s2);
+
+Everything inside s goes to s2
+
+Everything inside s2 goes to s
+
+No elements are copied one-by-one; the containers just exchange their internal data.
+*/
