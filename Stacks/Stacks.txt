@@ -20,4 +20,10 @@ Everything inside s goes to s2
 Everything inside s2 goes to s
 
 No elements are copied one-by-one; the containers just exchange their internal data.
-*/
+
+---------------------------------------------------------------------------------------------------------
+Implementation of stack using array
+
+while pushing an element in array check if space is there or not
+int top = -1;
+if( size - top > 1) //greater than 1 isliye check kr rhe h qki -> top = 0 se start krenge : aur size to one extra hi hoga : isliye > 1 condition sahi rhega
