@@ -48,5 +48,33 @@ class Solution {
         }
     }
 };
+//--------------------Recursive Approach ----------------------------------------------------
 
+class Solution {
+  public:
+    void solve(stack<int>& s , int count, int size){
+        
+        //BASE CASE
+        if(count == size/2){
+            s.pop();
+            return;
+        }
+        
+        //top wala element remove karte rho
+        int num = s.top();
+        s.pop();
+        
+        //Recursive call
+        solve(s, count+1, size);
+        
+        // return k time push karte jana
+        s.push(num);
+    }
+    void deleteMid(stack<int>& s) {
+       
+       int count = 0;
+       int  size= s.size();
+       solve(s, count, size);
+    }
+};
 
