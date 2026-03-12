@@ -23,11 +23,31 @@ void insertAtBottom (stack <int>& st , int element){
     st.push(num);
 }
 
+void ReverseStack(stack <int> &st){
+
+    if(st.empty()){
+        return ;
+    }
+
+    //top element ko store karo
+    int num = st.top();
+    st.pop();
+
+    //recursive call
+    ReverseStack(st);
+
+    //while returning insertAtBottom call kar do taki reversed list k end me top jaye
+    // aur pura stack reverse rhe
+
+    insertAtBottom(st, num);
+}
+
 
 
 /*
 ---------------------------------------Reverse Stack Using Recursion-------------------------
-
+Time Complexity O(n^2)
+Space Complexity O(n)
 -------------------------Algorithm-------------------------------------------------------
 
 1. pehle stack empty karo 
