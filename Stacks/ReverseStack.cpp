@@ -1,0 +1,48 @@
+#include<iostream>
+#include<stack>
+#include<vector>
+using namespace std;
+
+// code for InsertAtBottom -------------------JUST THE LOGIC PART--------------------------
+
+void insertAtBottom (stack <int>& st , int element){
+
+    //Base Case
+    if(st.empty()){
+        st.push(element);
+        return ;
+    }
+
+    int num = st.top(); //top element ko store karo phir pop karo
+    st.pop();
+
+    //recursive call
+    insertAtBottom(st, element);
+
+    //while returning wapas push karo har level pr .... top element ko
+    st.push(num);
+}
+
+
+
+/*
+---------------------------------------Reverse Stack Using Recursion-------------------------
+
+-------------------------Algorithm-------------------------------------------------------
+
+1. pehle stack empty karo 
+2. while emptying Stack top element store karo qki usse hi insertAtBottom karna h
+3. 1st case dekho baaki recursion reverse krke de dega 
+4. jab recusrion reverse krke de de to uske end me insertAtBottom wale logic se top wala element dal do
+5. insertAtBottom top ko last me kr dega har element k liye
+
+*/
+
+
+/*
+ Brute Force method
+
+ pehle stack k saare elements vector me daal lo
+ phir vector me se left to right print karwa lo (reverse order me print hoga)
+
+*/
