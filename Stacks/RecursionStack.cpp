@@ -42,7 +42,40 @@ void ReverseStack(stack <int> &st){
     insertAtBottom(st, num);
 }
 
+//------------------------------------------------------------------------------------------------------------------------
+// Sort a STACK using Recursion
+void sortedInsert(stack <int> &st , int element){
 
+    if(st.empty() || !st.empty() && st.top() < element){
+        st.push(element);
+        return;
+    }
+
+    //normal
+    int n = st.top();
+    st.pop();
+
+    //recusrive call
+    sortedInsert(st, element);
+
+    //while returning push elements which u poped earlier
+    st.push(n);
+}
+void sortStack(stack <int> &st){
+
+    if(st.empty()){
+        return;
+    }
+
+    int num = st.top();
+    st.pop();
+
+    //recusrive call
+    sortStack(st);
+
+    //while returning back
+    sortedInsert(st, num);
+}
 
 /*
 ---------------------------------------Reverse Stack Using Recursion-------------------------
