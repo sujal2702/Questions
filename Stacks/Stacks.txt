@@ -29,4 +29,28 @@ int top = -1;
 if( size - top > 1) //greater than 1 isliye check kr rhe h qki -> top = 0 se start krenge : aur size to one extra hi hoga : isliye > 1 condition sahi rhega
 
 ------------------------------------------------------------------------------------------------------------
-Implementation of stack using linked list 
+
+Minimum changes to make string valid
+1) if string size is odd --> return -1;
+2) In even Cases 
+ .) 1st remove the valid parenthesis
+ .) Now there are 3 types of Invalid Strings 
+     .) {{{{  --> all open brackets
+     .) {{{{  --> all closed brackets
+     .) }}}{{{  --> closed brackets are before open brackets
+
+     |
+     |
+
+    closed brackets before open brackets also have 2 types
+    }}}} {{{ 4closedBracktes 3openbrackets ----> (even+odd) = odd so return -1;
+    }}} {{{{ 3closedBracktes 4openbrackets ----> (even+odd) = odd so return -1;
+
+   let a = no of close bracktes
+   let b = no of open bracktes
+
+  to check ki kitne bracktes ko reverse krne pr string valid ho jayega
+
+  [(a+1)/2 + (b+1)/2] this is the brackets we need to change to make a string parenthesis valid
+
+      
