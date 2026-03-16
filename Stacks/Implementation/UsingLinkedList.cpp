@@ -54,8 +54,31 @@ class Stack{
     delete temp;
 
   }
-  
+
+  int peek(){ //because when peek is called we need to return a value
+
+    if(top != NULL){
+        return top -> data;
+    }
+    else{
+        cout<< "Stack is Empty" << endl;
+        return -1;
+    }
+  }
+
+  bool isEmpty(){
+
+    if(top == NULL){
+        return true;
+    }
+    else{
+        return false;
+    }
+  }
+
 };
+
+
 
 
 
