@@ -1,0 +1,62 @@
+#include<iostream>
+using namespace std;
+
+class Node{
+   
+    public:
+    int data;
+    Node* next;
+
+    //Constructor
+    Node(int d){
+        this -> data = d;
+        this -> next = NULL;
+    }
+
+};
+
+class Stack{
+
+    public:
+    Node* top;
+
+    //Constructor
+    Stack(){
+        top = NULL; //is to initialize the stack as empty
+    }
+
+    //pushing an element in linked list which is like stack
+    void push(int element){
+
+    //first create a node
+    Node* temp = new Node(element);
+
+    if(temp == NULL){
+        cout <<"Stack Overflow" <<endl; //just to ensure the memory is allocated or not
+        return;
+    }
+
+    //hamlog generally insertAtHead karte h stack banane or maintain krne k liye
+    temp -> next = top;
+    top = temp;
+  }
+
+  void pop(){ //in this we remove the element which is newly inserted LIFO (because we want stack behaviour)                
+                                                             // to remove from Head hi karna hoga.
+    if(top == NULL){
+        cout <<"Stack Underflow" <<endl;
+        return;
+    }
+
+    // aur agar empty nhi hua to 
+    Node* temp = top; //top pe temp rkho
+    top = top -> next;
+    delete temp;
+
+  }
+  
+};
+
+
+
+
