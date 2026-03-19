@@ -79,8 +79,51 @@ Infix to postfix conversion
 ^ → right associative (don’t pop on equal)
 
 5. End of expression
+-----------Algo code for this-----------------------
 
-➡️ Pop all remaining stack elements
+function priority(op):
 
+    if op == '+' or '-': return 1
+    if op == '*' or '/': return 2
+    if op == '^': return 3
+
+    return 0
+function infixToPostfix(s):
+
+    create empty stack st
+    create empty string ans
+
+    for each character ch in s:
+
+        if ch is operand:
+            append ch to ans
+
+        else if ch == '(':
+            push ch to stack
+
+        else if ch == ')':
+            while stack is not empty AND top != '(':
+                append top to ans
+                pop stack
+            pop '(' from stack
+
+        else:  // operator
+
+            while stack is not empty AND
+                  (priority(ch) < priority(top) OR
+                  (priority(ch) == priority(top) AND ch != '^')):
+
+                append top to ans
+                pop stack
+
+            push ch to stack
+
+    // after traversal
+    while stack is not empty:
+        append top to ans
+        pop stack
+
+    return ans
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
 
       
