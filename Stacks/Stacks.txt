@@ -79,7 +79,8 @@ Infix to postfix conversion
 ^ → right associative (don’t pop on equal)
 
 5. End of expression
------------Algo code for this-----------------------
+
+-----------PSEUDOCODE-----------------------
 
 function priority(op):
 
