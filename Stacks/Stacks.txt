@@ -52,5 +52,35 @@ Minimum changes to make string valid
   to check ki kitne bracktes ko reverse krne pr string valid ho jayega
 
   [(a+1)/2 + (b+1)/2] this is the brackets we need to change to make a string parenthesis valid
+-----------------------------------------------------------------------------------------------------
+
+Infix to postfix conversion
+
+ Rules ( IMPORTANT)
+1. Operand (a, b, 1, 2…)
+
+➡️ Directly add to answer string
+
+2. (
+
+➡️ Push to stack
+
+3. )
+
+➡️ Pop until '(' is found
+
+4. Operator (+ - * / ^)
+
+➡️ While stack has higher/equal priority → pop
+➡️ Then push current operator
+
+⚠️ Exception:
+
+^ → right associative (don’t pop on equal)
+
+5. End of expression
+
+➡️ Pop all remaining stack elements
+
 
       
