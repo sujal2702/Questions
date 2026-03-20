@@ -160,5 +160,29 @@ If current character is operator:
             pop → add to answer
 
     Push current operator to stack
-    
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+POSTFIX TO INFIX
+
+Initialize empty stack st
+
+Traverse the string from left to right (i = 0 to n-1):
+
+    If current character is operand:
+        Push it into stack
+
+    Else (current character is operator):
+
+        t1 = st.top()
+        st.pop()
+
+        t2 = st.top()
+        st.pop()
+
+        con = '(' + t2 + operator + t1 + ')'
+
+        Push con back into stack
+
+After traversal:
+    Return st.top()
  */
