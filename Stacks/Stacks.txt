@@ -126,5 +126,25 @@ function infixToPostfix(s):
 
     return ans
 --------------------------------------------------------------------------------------------------------------------------------------------------------------
+Infix to Prefix Conversion
 
+1. Reverse the string + after reversing completely reverse the bracket
+2. Perform this infix to postfix conversion and store it in answer 
+3. At last reverse the answer
+
+one change in logic of infix to postfix logic here
+
+If current character is operator:
+
+    If operator == '^':
+        While stack not empty AND
+              priority(curr) <= priority(stack.top()):
+            pop → add to answer
+
+    Else:
+        While stack not empty AND
+              priority(curr) < priority(stack.top()):
+            pop → add to answer
+
+    Push current operator to stack
       
