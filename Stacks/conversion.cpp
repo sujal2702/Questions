@@ -162,6 +162,37 @@ If current character is operator:
     Push current operator to stack
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
+EXCEPT INFIX TO.... PREFIX AND POSTIFX CONVERSION
+
+ --------->>>>>> -------------->>>>>>(IMPORTANT)  --------------->>>>>>>>
+
+BAAKI 4 JAISE KI prefix to postfix , infix AUR postfix to infix,prefix ka SAAR HAI YE
+
+postfix me AAGE se start krte h
+prefix me piche se start krte h iteration kisi bhi case me
+
+
+Aur jisme convert kr rhe h usme krne ka try karo 
+Agar prefix me convert kr rhe h to dono top k aage insert karo operator ko
+Agar infix h to dono top k bich me karo insert
+Agar postfix h to dono operator k baad me karo insert
+
+sirf infix to prefix & infix to postfix ka case thoda alag  h (Already Mnetioned)
+
+jab prefix to .. conversion ho 
+tab ham piche se start kr rhe h 
+'(' top1 + operator + top2 ')' -->  to Infix
+top1 + top2  + operator  --> to Postfiix
+
+
+jab postfix to .. conversion ho 
+tab ham aage se start kr rhe h to 
+'(' top2 + operator + top1 ')' --> to Infix
+operator + top2 +  top1   --> to Prefix
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------
 POSTFIX TO INFIX
 
 Initialize empty stack st
