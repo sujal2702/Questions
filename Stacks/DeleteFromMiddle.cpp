@@ -10,7 +10,7 @@ class Solution {
 
     void deleteMid(stack<int>& s) {
         
-        vector<int> arr; //store temporarilt top elements of stack
+        vector<int> arr; //store temporarily  top elements of stack
         
         int n = s.size(); //stack ka size
         
