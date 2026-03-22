@@ -53,3 +53,10 @@ Minimum changes to make string valid
 
   [(a+1)/2 + (b+1)/2] this is the brackets we need to change to make a string parenthesis valid
 -----------------------------------------------------------------------------------------------------      
+Next Greater Element and Next Smaller Element
+
+if u need to find next Next Greater Element (in normal array not in circular array) START from the last element so that comparisons will be less
+store it in stack  :  then according to the question --> write the condition pop the unwanted element which do not satisfy the condition
+
+In Next smaller u can insert -1 in starting so that if no element is smalller it will return -1 else st.top() , in condition part write opposite condition and pop that element
+In Next Greater element use conditon and after condition everytime check if array is empty push -1 else push st.top()
