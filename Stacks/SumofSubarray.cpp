@@ -86,6 +86,38 @@ for example for an array [1, 2, 3] 1 is mimimum for 3 subarrays : 2 is minimum f
   4. If there is no NSE then assign Next Smaller Element(NSE) to Nth index. & If there is no PSE then PSE = -1;
   5. Important thing to remember if we don't want duplicate --> while searching NSE keep index of element which is only smaller remove/pop =(equal) element also
                                                                 while searching pse keep index of element which is either smaller or equal to  // this will avoid duplicate subarrays 
+
+  TIME COMPLEXITY WILL BE AROUND O(5n) = almost equal to O(n)
+  SPACE COMPLEXITY WILL BE AROUND O(5n) = almost equal to O(n)
   
-  
+*/
+
+//TO calculate  ----------------------------------------------------------SUM OF SUBARRAY RANGES -----------------------------------------------------------------
+
+//THIS is the brute force approach
+class Solution {
+  public:
+    int subarrayRanges(vector<int>& arr) {
+        
+        int sum =0;
+        for(int i=0; i<arr.size(); i++){
+            int maxi = INT_MIN;
+            int mini = INT_MAX;
+            for(int j=i; j<arr.size(); j++){
+                maxi = max(maxi, arr[j]);
+                mini = min(mini, arr[j]);
+                sum = sum + (maxi - mini);
+            }
+        }
+        return sum;
+    }
+};
+
+/*for optimal approach 
+  first find sum of subarray minimum 
+  then find sum of subarray maximum
+
+  Then return SumOfSubarray Maximum - SumOfSubarray Minimum 
+
+  TIME COMPLEXITY will be O95n) + O(5n) = O(10n) which is as good as O(n):
 */
