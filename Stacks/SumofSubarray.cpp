@@ -113,11 +113,12 @@ class Solution {
     }
 };
 
-/*for optimal approach 
-  first find sum of subarray minimum 
-  then find sum of subarray maximum
+/*for optimal approach
 
-  Then return SumOfSubarray Maximum - SumOfSubarray Minimum 
+  1. find sum of subarray minimum 
+  2. find sum of subarray maximum
+
+  3. Then return SumOfSubarray Maximum - SumOfSubarray Minimum 
 
   TIME COMPLEXITY will be O95n) + O(5n) = O(10n) which is as good as O(n):
 */
