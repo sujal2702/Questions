@@ -66,7 +66,8 @@ class myQueue {
     int getRear() {
         if(front == rear) return -1; //agar empty h to return 
         else{
-            return arr[rear-1];  // rear hamesha read element se ek aage rhta h isliye rear element liye arr[rear-1]; 
+            return arr[rear-1];  // rear pointer hamesha rear element se ek aage rhta h isliye rear element liye arr[rear-1]; 
         }
     }
 };
+// Time Complexity of this Implementation is O(1) //since we are using if and else only
