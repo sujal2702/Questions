@@ -105,3 +105,8 @@ int main( ) {
 
     return 0;
 }
+// ------------------------------------ to covert a long string ( paragraph = "Bob hit a ball, the hit BALL flew far after it was hit." something like this to lowercase letter ) here paragraph is Name of string
+        for (char& c : paragraph) {
+            c = tolower(c);
+        }
+
