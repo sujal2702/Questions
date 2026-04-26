@@ -110,3 +110,35 @@ int main( ) {
             c = tolower(c);
         }
 
+// --------------------------To Push String whole paragraph --------- To Vector ------------  (IMPORTANT) 
+//  paragraph = "Bob hit a ball, the hit BALL flew far after it was hit." something like this to lowercase letter // this is the string given
+        vector<string> words;
+        string temp = "";
+
+        for (int i = 0; i < paragraph.size(); i++) {
+
+            if (isalpha(paragraph[i])) {       // only letters
+                temp += tolower(paragraph[i]); // build word
+            } else {
+                if (temp != "") {
+                    words.push_back(temp);
+                    temp = "";
+                }
+            }
+        }
+
+// After the Lopp Ends
+
+        // last word (important)
+        if (temp != "") {
+            words.push_back(temp);
+        }
+
+//because agar last me full stop nhi hua aur else me gaye hi nhi to push nhi ho payega isliye last case alag se handle krna hoga
+/*
+Use isalpha() → when you want only words
+Use isdigit() → when dealing with numbers
+Use isalnum() → when words may include numbers
+*/
+
+
