@@ -45,7 +45,16 @@ void inorder(node* root)
     cout << root->data << " ";
     inorder(root->right);
 }
+// Preorder: Node -> Left -> Right
+void preorder(node* root)
+{
+    if (root == NULL)
+        return;
 
+    cout << root->data << " ";
+    preorder(root->left);
+    preorder(root->right);
+}
 
 int main()
 {
@@ -57,7 +66,8 @@ int main()
     cout << "\nInorder Traversal: ";
     inorder(root);
 
-    
+    cout << "\nPreorder Traversal: ";
+    preorder(root);
 
     cout << endl;
 
