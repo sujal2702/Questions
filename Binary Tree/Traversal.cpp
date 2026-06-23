@@ -91,3 +91,24 @@ int main()
     // 1 3 7 -1 -1 11 -1 -1 5 17 -1 -1 -1
 }
 
+For the input:
+
+1 3 7 -1 -1 11 -1 -1 5 17 -1 -1 -1
+
+the tree formed is:
+
+        1
+      /   \
+     3     5
+    / \   /
+   7  11 17
+
+Inorder (Left → Node → Right)
+7 3 11 1 17 5
+
+Preorder (Node → Left → Right)
+1 3 7 11 5 17
+
+Postorder (Left → Right → Node)
+7 11 3 17 5 1
+
