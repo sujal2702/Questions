@@ -37,7 +37,7 @@ class Solution {
 class Solution {
   public:
   int height(Node* root) {
-        // code here
+        
         if(root == NULL){
             return -1;
         }
@@ -68,3 +68,4 @@ class Solution {
     }
 };
 
+//Diameter of a tree with height included in same pair // T.C. O(N)
