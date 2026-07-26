@@ -139,6 +139,9 @@ int main( ) {
 Use isalpha() → when you want only words
 Use isdigit() → when dealing with numbers
 Use isalnum() → when words may include numbers
+
+tolower() only changes uppercase alphabetic characters (A–Z) to lowercase (a–z).
+For all other characters (spaces, punctuation, digits, etc.), it simply returns the character unchanged. NO ERROR MESSAGE it just simply return same thing.
 */
 
 
