@@ -1,4 +1,6 @@
 // Function to Heapify the exisiting array in heap 
+// This is According to 0 based indexing
+
 
 void heapify(vector<int>& arr, int i, int n) {
     int largest = i;
