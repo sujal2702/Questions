@@ -129,4 +129,64 @@ class Solution {
 
                            fast == NULL → even  fast last node k aage NULL pe hoga
 
-                            fast != NULL → odd   fast last wale node pe hoga */
+                            fast != NULL → odd   fast last wale node pe hoga 
+
+-------------------------------------------------------------------------------------------------
+----------------------- MIDDLE NODE RULE TO REMEMBER -------------------------------------------- */
+
+
+slow = head;
+fast = head->next;
+
+while(fast != NULL && fast->next != NULL) {
+    slow = slow->next;
+    fast = fast->next->next;
+}
+
+return slow;
+
+/*
+
+
+Simple Rule
+fast = head;
+
+👉 Jab tujhe middle node chahiye.
+
+1 → 2 → 3 → 4 → 5
+          ↑
+        middle
+
+For even list:
+
+1 → 2 → 3 → 4
+          ↑
+       second middle
+
+       
+fast = head->next;
+👉 Jab tujhe middle ke previous node chahiye — especially middle mein insertion ke liye.
+
+1 → 2 → 3 → 4
+    ↑
+   slow
+
+Then insert after slow:
+
+1 → 2 → X → 3 → 4
+
+
+Bas ye yaad rakh: --------- IMPORTANT ---------
+    
+fast = head->next →  slow ends at ----- first middle
+fast = head → slow end at ----- second middle
+
+For odd-sized lists, both generally end at the actual middle:
+
+1 → 2 → 3 → 4 → 5
+          ↑
+        slow
+
+That's why the difference becomes important mainly for even-sized linked lists.
+
+*/
