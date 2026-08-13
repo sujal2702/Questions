@@ -12,16 +12,10 @@ General Case
 
 IN INSERTION - Traverse till 1 position behind where we need to Insert (count < position - 1);
 
-IN DELETION - Make Prev and NULL since we need to connect prev ka next To current ka next and delete curr;
+IN DELETION - Make Prev and NULL since we need to connect prev ka next To current ka next and delete curr 
+            - Traverse till position u need to delete (count < position); 
 
-
-
-
-
-
-
-
-
+IN REVERSE make PREV and CURR pointer and traverse till CURR != NULL;
 
 
 -----------------------------------------------------------------------------------------------------------------------------------------
