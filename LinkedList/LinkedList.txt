@@ -12,10 +12,12 @@ General Case
 
 IN INSERTION - Traverse till 1 position behind where we need to Insert (count < position - 1);
 
-IN DELETION - Make Prev and NULL since we need to connect prev ka next To current ka next and delete curr 
+IN DELETION - Make PREV and CURR since we need to connect prev ka next To current ka next and delete curr 
             - Traverse till position u need to delete (count < position); 
 
-IN REVERSE make PREV and CURR pointer and traverse till CURR != NULL;
+IN REVERSE make PREV and CURR pointer and traverse till CURR != NULL; make sure to store the 
+           curr -> next in forward otherwise chnage krte wakt curr -> next lost ho jayega
+           at last CURR will be at NULL and PREV will be pointing at the last node which is (new Head)
 
 
 -----------------------------------------------------------------------------------------------------------------------------------------
