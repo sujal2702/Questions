@@ -1,0 +1,33 @@
+(Upper bound and Lower Bound ) ---> Works on Sorted Range
+
+Easy way to remember
+Function	Returns iterator to first element...
+lower_bound(x)	>= x
+upper_bound(x)	> x
+
+
+Suppose:
+
+vector<int> v = {1, 2, 2, 2, 4, 5, 7};
+
+lower_bound(v.begin(), v.end(), 2);
+
+returns an iterator pointing to the first element that is >= 2.
+
+Here:
+
+1  2  2  2  4  5  7
+   ^
+   first >= 2
+
+So it points to the first 2.
+
+
+upper_bound(v.begin(), v.end(), 2);
+
+returns an iterator pointing to the first element that is > 2.
+
+1  2  2  2  4  5  7
+            ^
+            first > 2
+--------------------------------------------------------------------------------------------------
