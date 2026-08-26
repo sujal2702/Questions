@@ -32,3 +32,33 @@ class Solution {
     }
 };
 
+// ---------------------------------------------------DFS TRAVERSAL ------------------------------------------------------------------------------------------------------------------
+class Solution {
+  private:
+  void traversal(int node, vector<vector<int>>& adj, int vis[], vector<int>&ls){
+      
+      vis[node] = 1;
+      ls.push_back(node);
+      for(auto it : adj[node]){ //adjacent k har element k liye
+        if(!vis[it]){
+            traversal(it, adj, vis, ls);
+        }
+      }
+  }
+  public:
+    vector<int> dfs(vector<vector<int>>& adj) {
+        //Recrusion 
+        /*
+        Visited array banao , jo jo node visited hote jaye unhe 1 mark krte jao
+        vector banake DFS store bhi krte jao
+        phir adjacent node k 1st index k har element k liye recursive call krdo
+        neighbours ko tabhi visit kro jab wo already visited na ho
+        */ 
+        vector<int>ls;
+        int n = adj.size();
+        int vis[n] = {0}; //initially zero for every node
+        int start = 0;
+        traversal(start , adj, vis, ls);
+        return ls;
+    }
+};
