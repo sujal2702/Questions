@@ -81,3 +81,19 @@ vector<vector<int>> edges = {
                  Only 2 Element will be there in 2D array  that is U node connected to V
 */ 
 // ---------------------------------------------------------------------------------------------------------------------------------------------------
+ //to traverse all the neighbouring nodes of any [row][col]
+
+            for(int delrow = -1; delrow <= 1; delrow++){
+                for(int delcol = -1; delcol <= 1; delcol++){
+                    
+                    int nrow = row + delrow;
+                    int ncol = col + delcol;
+                    
+                    if(nrow >= 0 && nrow < n && ncol >= 0  && ncol < m && // this is the required condition here all the neighbour nodes are there
+                     
+                    !vis[nrow][ncol] && grid[nrow][ncol] == '1'){ //while this conditions changes according to the requirements
+                        q.push({nrow , ncol});
+                        vis[nrow][ncol] = 1; // don't forget
+                    }
+                }
+            }
