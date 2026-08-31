@@ -97,3 +97,18 @@ vector<vector<int>> edges = {
                     }
                 }
             }
+//-------------------------------------------------------------------------------- If you only want the 4-direction traversal part, this is the core code ---------------------------------------------------------
+
+int delRow[] = {-1, 0, 1, 0}; //ye tum clockwise likhe ho from up -> right -> down -> left
+int delCol[] = {0, 1, 0, -1}; //ye tum clockwise likhe ho from up -> right -> down -> left
+
+for(int i = 0; i < 4; i++) {
+    int nrow = row + delRow[i];
+    int ncol = col + delCol[i];
+
+    if(nrow >= 0 && nrow < n &&
+       ncol >= 0 && ncol < m) {
+
+        // (nrow, ncol) is a valid neighbouring cell
+    }
+}
