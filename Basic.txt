@@ -1,3 +1,33 @@
+HCF AND LCM of an Array Or 2 numbers
+
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    vector<int> arr = {12, 18, 24};
+
+    int n = arr.size();
+
+    int g = arr[0];
+    int l = arr[0];
+
+    for (int i = 1; i < n; i++) {
+        g = gcd(g, arr[i]);
+        l = lcm(l, arr[i]);
+    }
+
+    cout << "GCD = " << g << endl;
+    cout << "LCM = " << l << endl;
+
+    return 0;
+}
+
+1. gcd(a, b) – Used to find the Greatest Common Divisor (GCD) of two numbers. It is available in the <numeric> header.
+2. lcm(a, b) – Used to find the Least Common Multiple (LCM) of two numbers. It is available in the <numeric> header.
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 Agar kabhi ODD EVEN index wala case fhase aur har baar middle element chahiye to 
 
 if n is the size then
